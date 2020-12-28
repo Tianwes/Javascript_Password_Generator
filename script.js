@@ -12,7 +12,7 @@ function generatePassword() {
   var passwordLength = prompt("Please pick a password length between 8-128 characters.")
 
   while (passwordLength < 8 || passwordLength > 128) {
-    alert("Invalid");
+    alert("Invalid: Your password should be 8-128 characters.");
     var passwordLength = prompt("Please pick a password length between 8-128 characters.");
     if (passwordLength >= 8 && passwordLength <= 128) {
       break;
@@ -48,13 +48,22 @@ function generatePassword() {
   } else if (specialCharConfirm === false) {
     alert("Your password will NOT contain special characters!");
   }
-  
-  
+    // need to store question inputs and randomize arrays
 
-
+  // if all confirms are answered negative
+  if (lowerCaseConfirm === false && upperCaseConfirm === false && numConfirm === false && specialCharConfirm === false){
+    alert("Please select at least one character type for your password.");
+    generatePassword();
+  }
+  else{
+    alert("Generating your password now!");
+  }
+  
 }
 
-
+function passwordText(){
+  
+}
 
 
 // Write password to the #password input
