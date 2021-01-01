@@ -2,7 +2,6 @@
 A personalized, random password is generated via Javascript
 
 ## When the user clicks the "Generate Password" button
--------------------------------------------------------
 
 - a prompt will ask user's preferred password length (between 8-128 characters) 
     - if an invalid password length is entered, user will be notified and asked to input valid number
